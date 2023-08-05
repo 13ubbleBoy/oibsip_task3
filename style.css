@@ -1,0 +1,35 @@
+body{
+    background-color: beige;
+}
+
+#main{
+    height: 678px;
+    width: 60%;
+    margin: auto;
+    background-color: bisque;
+    border-radius: 10%;
+}
+
+#inp{
+    margin-left: 150px;
+    margin-top: 150px;
+    margin-right: 50px;
+}
+
+#btn{
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.rb{
+    margin-left: 10px;
+}
+
+#kvn{
+    margin-left: 50px;
+}
+
+.anslabel{
+    margin-left: 150px;
+}

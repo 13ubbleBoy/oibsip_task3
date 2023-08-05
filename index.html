@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script>
+        function cal(){
+            var x=document.getElementById("inp").value;
+            var c=document.getElementById("rbc");
+            var kl=document.getElementById("rbk");
+            if(c.checked == false && kl.checked == false){
+                window.alert("Please select Celsius or Fahrenheit");
+                return false;
+            }
+            if(c.checked){
+                var f=((9/5)*x)+32;
+                f=parseFloat(f).toFixed(2);
+                document.getElementById("ans").innerHTML = f + " \u00B0 F";
+                var k=((f-32)*(5/9))+273.15;
+                document.getElementById("ansink").innerHTML = k;
+            } else{
+                var c=((x-32)*5)/9;
+                var k=c+273.15;
+                c=parseFloat(c).toFixed(2);
+                document.getElementById("ans").innerHTML = c + " \u00B0 C";
+                
+                document.getElementById("ansink").innerHTML = k;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="main">
+        <input type="number" id="inp" placeholder="Enter value">
+        <label>Celsius</label>
+        <input type="radio" class="rb" id="rbc">
+        <label id="kvn">Fahrenheit</label>
+        <input type="radio" class="rb" id="rbk"> <br>
+        <button id="btn" onclick="cal()">Convert</button> <br> <br>
+        <label class="anslabel">Answer : </label>
+        <label id="ans">Answer</label> <br>
+        <label class="anslabel">Answer in Kelvin : </label>
+        <label id="ansink">Answer</label>
+    </div>
+</body>
+</html>
